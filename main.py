@@ -8,7 +8,7 @@ from spotify_utils import SpotifyAPI
 
 # Removed load_dotenv()
 
-TOKEN = os.getenv("MUSIC_DISCORD_TOKEN")
+TOKEN = os.getenv("DISCORD_TOKEN")
 MUSIC_TEXT_CHANNEL = int(os.getenv("MUSIC_TEXT_CHANNEL"))
 MUSIC_VOICE_CHANNEL = int(os.getenv("MUSIC_VOICE_CHANNEL"))
 SPOTIFY_PLAYLIST_ID = os.getenv("SPOTIFY_PLAYLIST_ID")  # Just the playlist ID, not full URL
@@ -145,8 +145,5 @@ async def manual_start(ctx):
     await ctx.send("🎧 Starting a new music trivia round!")
     await start_music_round()
 
-print("Token:", TOKEN)
-if not TOKEN:
-    print("ERROR: MUSIC_DISCORD_TOKEN is not set or is empty!")
-    exit(1)
+
 bot.run(TOKEN)
