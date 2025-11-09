@@ -1,0 +1,6 @@
+discord.py==2.3.2
+ffmpeg-python
+python-dotenv
+aiohttp
+rapidfuzz
+spotipy
