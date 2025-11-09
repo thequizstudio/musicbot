@@ -4,3 +4,4 @@ python-dotenv
 aiohttp
 rapidfuzz
 spotipy
+PyNaCl
