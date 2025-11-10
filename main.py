@@ -13,7 +13,7 @@ QUESTIONS_FILE = "songs.json"
 
 NUMBER_OF_QUESTIONS_PER_ROUND = 10
 DELAY_BETWEEN_ROUNDS = 30
-ANSWER_TIMEOUT = 1
+ANSWER_TIMEOUT = 0
 PREVIEW_DURATION = 12
 FUZZ_THRESHOLD = 85
 
@@ -174,7 +174,7 @@ async def start_new_round(guild):
 
     categories = get_round_categories(current_round_questions)
     await send_embed(text_channel, "\n".join(categories), title="🎯 Next Round Preview")
-    await send_embed(text_channel, f"New round about to begin... ⏱️ {len(current_round_questions)} new questions!", title="🧐 Quiz Starting!")
+    await send_embed(text_channel, f"New round about to begin... ⏱️ {len(current_round_questions)} new questions!\n\n **Make sure you are connected to the voice channel #music-questions to hear the songs** 🎵", title="🧐 Quiz Starting!")
     await asyncio.sleep(7)
 
     vc = None
