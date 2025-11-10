@@ -110,4 +110,4 @@ async def on_ready():
     print("🎶 Music trivia bot is ready.")
 
 # ---- START BOT ----
-bot.run("YOUR_DISCORD_BOT_TOKEN")
+bot.run("DISCORD_TOKEN")
