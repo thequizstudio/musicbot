@@ -1,7 +1,6 @@
 import os
 import base64
 import aiohttp
-import asyncio
 
 CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
@@ -12,11 +11,15 @@ class SpotifyAPI:
         self.client_id = CLIENT_ID
         self.client_secret = CLIENT_SECRET
         self.access_token = None
-        self.token_expires = 0
+        self.session = None
+
+    async def init_session(self):
         self.session = aiohttp.ClientSession()
+        await self.get_token()
 
     async def close(self):
-        await self.session.close()
+        if self.session:
+            await self.session.close()
 
     async def get_token(self):
         auth_str = f"{self.client_id}:{self.client_secret}"
@@ -31,7 +34,6 @@ class SpotifyAPI:
             resp.raise_for_status()
             token_data = await resp.json()
             self.access_token = token_data["access_token"]
-            # Optionally handle expires_in for refreshing token if needed
 
     async def _get_headers(self):
         if not self.access_token:
@@ -47,5 +49,3 @@ class SpotifyAPI:
             resp.raise_for_status()
             data = await resp.json()
             return data.get("items", [])
-
-    # You can add more methods similarly if needed
