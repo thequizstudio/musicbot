@@ -6,12 +6,10 @@ import os
 from rapidfuzz import fuzz
 from spotify_utils import SpotifyAPI
 
-# Removed load_dotenv()
-
 TOKEN = os.getenv("DISCORD_TOKEN")
 MUSIC_TEXT_CHANNEL = int(os.getenv("MUSIC_TEXT_CHANNEL"))
 MUSIC_VOICE_CHANNEL = int(os.getenv("MUSIC_VOICE_CHANNEL"))
-SPOTIFY_PLAYLIST_ID = os.getenv("SPOTIFY_PLAYLIST_ID")  # Just the playlist ID, not full URL
+SPOTIFY_PLAYLIST_ID = os.getenv("SPOTIFY_PLAYLIST_ID")
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -21,12 +19,16 @@ current_song = None
 answer_found = False
 fastest_answered = False
 
-spotify = SpotifyAPI()  # Instantiate Spotify API helper
-
+spotify = SpotifyAPI()
 
 async def load_spotify_songs():
     print(f"Fetching tracks from Spotify playlist {SPOTIFY_PLAYLIST_ID}...")
-    items = spotify.get_playlist_tracks(SPOTIFY_PLAYLIST_ID, limit=100)
+    try:
+        items = await spotify.get_playlist_tracks(SPOTIFY_PLAYLIST_ID, limit=100)
+    except Exception as e:
+        print(f"Error fetching playlist: {e}")
+        return []
+
     tracks = []
     for item in items:
         track = item.get("track")
@@ -46,7 +48,6 @@ async def load_spotify_songs():
     print(f"Loaded {len(tracks)} previewable tracks from Spotify.")
     return tracks
 
-
 async def start_music_round():
     try:
         channel = await bot.fetch_channel(MUSIC_TEXT_CHANNEL)
@@ -65,7 +66,15 @@ async def start_music_round():
         await channel.send("❌ Voice channel not found.")
         return
 
-    vc = await vc_channel.connect()
+    try:
+        vc = await vc_channel.connect()
+    except discord.ClientException:
+        # Already connected, try to get current voice client
+        vc = discord.utils.get(bot.voice_clients, guild=vc_channel.guild)
+        if vc is None:
+            await channel.send("❌ Failed to connect to voice channel.")
+            return
+
     await channel.send("🎶 **Welcome to Music Trivia!** Guess the song title as fast as you can!")
 
     songs = await load_spotify_songs()
@@ -100,13 +109,12 @@ async def start_music_round():
     await show_leaderboard(channel)
     await channel.send("🎵 Round complete! Type `!music` to start another game.")
 
-
 @bot.event
 async def on_ready():
     print(f"{bot.user} is live as the Music Trivia Bot 🎵")
     # Auto-start on bot ready:
-    await start_music_round()
-
+    # Run in background task so on_ready doesn’t block event loop
+    bot.loop.create_task(start_music_round())
 
 @bot.event
 async def on_message(message):
@@ -137,7 +145,6 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-
 async def show_leaderboard(channel):
     if not scores:
         await channel.send("No correct answers this round.")
@@ -149,11 +156,14 @@ async def show_leaderboard(channel):
     )
     await channel.send(f"🏆 **Final Leaderboard:**\n{leaderboard}")
 
-
 @bot.command(name="music")
 async def manual_start(ctx):
     await ctx.send("🎧 Starting a new music trivia round!")
     await start_music_round()
 
+@bot.event
+async def on_disconnect():
+    # Close aiohttp session cleanly on shutdown
+    await spotify.close()
 
 bot.run(TOKEN)
