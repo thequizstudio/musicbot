@@ -3,6 +3,7 @@ import asyncio
 import yt_dlp
 import json
 import random
+import os
 from discord.ext import commands
 
 # ---- BOT CONFIG ----
@@ -13,7 +14,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 # ---- LOAD QUESTIONS ----
 def load_questions():
     try:
-        with open("songs.json", "r", encoding="utf-8") as f:
+        with open("music_questions.json", "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
         print("❌ Error: music_questions.json not found!")
@@ -109,5 +110,10 @@ async def on_ready():
     print(f"✅ Logged in as {bot.user}")
     print("🎶 Music trivia bot is ready.")
 
-# ---- START BOT ----
-bot.run("DISCORD_TOKEN")
+# ---- START BOT (from Railway variable) ----
+token = os.getenv("DISCORD_TOKEN")
+
+if not token:
+    print("❌ Error: DISCORD_TOKEN environment variable not found!")
+else:
+    bot.run(token)
