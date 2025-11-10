@@ -1,61 +1,116 @@
 [
   {
-    "question": "1980s 🎧\n\nGuess the song from this clip:",
+    "question": "DECADE: 1980s📅\n\nGuess the song from this clip:",
     "answer": "Never Gonna Give You Up",
     "url": "https://music.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
-    "question": "1980s 🎧\n\nName this 80s pop hit:",
+    "question": "DECADE: 1980s 📅\n\nName this 80s pop hit:",
     "answer": "Billie Jean",
     "url": "https://music.youtube.com/watch?v=Zi_XLOBDo_Y"
   },
   {
-    "question": "CLASSIC ROCK 🎧\n\nWhich song is this?",
+    "question": "CLASSIC ROCK 🎸\n\nWhich song is this?",
     "answer": "Bohemian Rhapsody",
     "url": "https://music.youtube.com/watch?v=fJ9rUzIMcZQ"
   },
   {
-    "question": "ALTERNATIVE 🎧\n\nIdentify the track:",
+    "question": "ALTERNATIVE 🤘\n\nIdentify the track:",
     "answer": "Smells Like Teen Spirit",
     "url": "https://music.youtube.com/watch?v=hTWKbfoikeg"
   },
   {
-    "question": "CLASSIC ROCK 🎧\n\nWhat’s the name of this classic rock song?",
+    "question": "CLASSIC ROCK 🎸\n\nWhat’s the name of this classic rock song?",
     "answer": "Hotel California",
     "url": "https://music.youtube.com/watch?v=EqPtz5qN7HM"
   },
   {
-    "question": "2010s 🎧\n\nGuess the track from this snippet:",
+    "question": "DECADE: 2010s 📅\n\nGuess the track from this snippet:",
     "answer": "Shape of You",
     "url": "https://music.youtube.com/watch?v=JGwWNGJdvx8"
   },
   {
-    "question": "2020s 🎧\n\nWhich song is this modern pop smash?",
+    "question": "DECADE: 2020s 📅\n\nWhich song is this modern pop smash?",
     "answer": "Blinding Lights",
     "url": "https://music.youtube.com/watch?v=fHI8X4OXluQ"
   },
   {
-    "question": "1990s 🎧\n\nName this hit from the 90s:",
+    "question": "DECADE: 1990s 📅\n\nName this hit from the 90s:",
     "answer": "Wonderwall",
     "url": "https://music.youtube.com/watch?v=6hzrDeceEKc"
   },
   {
-    "question": "2010s 🎧\n\nWhat’s the name of this dance track?",
+    "question": "DECADE: 2010s 📅\n\nWhat’s the name of this dance track?",
     "answer": "Titanium",
     "url": "https://music.youtube.com/watch?v=JRfuAukYTKg"
   },
   {
-    "question": "2010s 🎧\n\nIdentify this pop-rock song:",
+    "question": "DECADE: 2010s 📅\n\nIdentify this pop-rock song:",
     "answer": "Uptown Funk",
     "url": "https://music.youtube.com/watch?v=OPf0YbXqDm0"
   },
   {
-    "question": "MOTOWN HITS 🎧\n\nGuess the classic Motown song:",
+    "question": "MOTOWN HITS 📀\n\nGuess the classic Motown song:",
     "answer": "I Heard It Through the Grapevine",
     "url": "https://music.youtube.com/watch?v=6LAPFM3dgag"
   },
   {
-    "question": "2000s 🎧\n\nName this 2000s alternative track:",
+    "question": "HIP HOP 📾\n\nGuess the song from this clip:",
+    "answer": "Lose Yourself",
+    "url": "https://music.youtube.com/watch?v=_Yhyp-_hX2s"
+  },
+  {
+    "question": "ELECTRONIC ⚡\n\nGuess the song from this clip:",
+    "answer": "Sandstorm",
+    "url": "https://music.youtube.com/watch?v=y6120QOlsfU"
+  },
+  {
+    "question": "DECADE: 2000s📅\n\nGuess the song from this clip:",
+    "answer": "Hey Ya!",
+    "url": "https://music.youtube.com/watch?v=PWgvGjAhvIw"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the song from this clip:",
+    "answer": "Bad Romance",
+    "url": "https://music.youtube.com/watch?v=qrO4YZeyl0I"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the song from this clip:",
+    "answer": "Crazy in Love",
+    "url": "https://music.youtube.com/watch?v=ViwtNLUqkMY"
+  },
+  {
+    "question": "DECADE: 2010s📅\n\nGuess the song from this clip:",
+    "answer": "Rolling in the Deep",
+    "url": "https://music.youtube.com/watch?v=rYEDA3JcQqw"
+  },
+  {
+    "question": "ALTERNATIVE 🤘\n\nGuess the song from this clip:",
+    "answer": "Enter Sandman",
+    "url": "https://music.youtube.com/watch?v=CD-E-LDc384"
+  },
+  {
+    "question": "DECADE: 2010s📅\n\nGuess the song from this clip:",
+    "answer": "Shape of You",
+    "url": "https://music.youtube.com/watch?v=JGwWNGJdvx8"
+  },
+  {
+    "question": "REGGAE 🇯🇲\n\nGuess the song from this clip:",
+    "answer": "No Woman No Cry",
+    "url": "https://music.youtube.com/watch?v=IT8XvzIfiAY"
+  },
+  {
+    "question": "COUNTRY HITS 🤠\n\nGuess the song from this clip:",
+    "answer": "Jolene",
+    "url": "https://music.youtube.com/watch?v=Ixrje2rXLMA"
+  },
+  {
+    "question": "DISCO 🕺\n\nGuess the song from this clip:",
+    "answer": "Stayin' Alive",
+    "url": "https://music.youtube.com/watch?v=I_izvAbhExY"
+  },
+  {
+    "question": "INDIE 🪕\n\nGuess the song from this clip",
     "answer": "Chasing Cars",
     "url": "https://music.youtube.com/watch?v=GemKqzILV4w"
   }
