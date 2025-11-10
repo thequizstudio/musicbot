@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 # ---- LOAD QUESTIONS ----
 def load_questions():
     try:
-        with open("music_questions.json", "r", encoding="utf-8") as f:
+        with open("songs.json", "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
         print("❌ Error: music_questions.json not found!")
