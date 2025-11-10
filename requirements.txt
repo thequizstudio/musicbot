@@ -2,6 +2,6 @@ discord.py==2.6.4
 ffmpeg-python
 python-dotenv
 aiohttp
-rapidfuzz
+rapidfuzz==3.14.3
 yt-dlp
 PyNaCl
