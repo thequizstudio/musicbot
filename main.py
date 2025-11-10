@@ -3,12 +3,15 @@ from discord.ext import commands
 import asyncio
 import random
 import os
-import json
 from rapidfuzz import fuzz
+import subprocess
+import json
 
+# Load environment variables
 TOKEN = os.getenv("DISCORD_TOKEN")
 MUSIC_TEXT_CHANNEL = int(os.getenv("MUSIC_TEXT_CHANNEL"))
 MUSIC_VOICE_CHANNEL = int(os.getenv("MUSIC_VOICE_CHANNEL"))
+SONGS_JSON_PATH = "songs.json"  # your local JSON database of songs
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -18,18 +21,29 @@ current_song = None
 answer_found = False
 fastest_answered = False
 
-async def load_tracks_from_json(filename="songs.json"):
+# Detect ffmpeg path dynamically
+def get_ffmpeg_path():
     try:
-        with open(filename, "r", encoding="utf-8") as f:
-            tracks = json.load(f)
-        print(f"Loaded {len(tracks)} tracks from {filename}.")
-        return tracks
-    except FileNotFoundError:
-        print(f"❌ JSON file {filename} not found.")
-        return []
+        path = subprocess.check_output(["which", "ffmpeg"]).decode().strip()
+        print(f"Using ffmpeg executable at: {path}")
+        return path
     except Exception as e:
-        print(f"❌ Error loading JSON file: {e}")
+        print(f"Could not find ffmpeg executable, falling back to 'ffmpeg': {e}")
+        return "ffmpeg"
+
+FFMPEG_PATH = get_ffmpeg_path()
+
+
+async def load_songs_from_json():
+    try:
+        with open(SONGS_JSON_PATH, "r", encoding="utf-8") as f:
+            songs = json.load(f)
+            print(f"Loaded {len(songs)} tracks from {SONGS_JSON_PATH}.")
+            return songs
+    except Exception as e:
+        print(f"Failed to load songs from JSON: {e}")
         return []
+
 
 async def start_music_round():
     try:
@@ -49,17 +63,17 @@ async def start_music_round():
         await channel.send("❌ Voice channel not found.")
         return
 
-    # Connect to voice channel, check if already connected first
-    if not bot.voice_clients or not any(vc.channel.id == MUSIC_VOICE_CHANNEL for vc in bot.voice_clients):
+    try:
         vc = await vc_channel.connect()
-    else:
-        vc = discord.utils.get(bot.voice_clients, channel=vc_channel)
+    except Exception as e:
+        await channel.send(f"❌ Failed to connect to voice channel: {e}")
+        return
 
     await channel.send("🎶 **Welcome to Music Trivia!** Guess the song title as fast as you can!")
 
-    songs = await load_tracks_from_json("songs.json")
+    songs = await load_songs_from_json()
     if len(songs) < 10:
-        await channel.send("⚠️ Not enough tracks in the JSON database!")
+        await channel.send("⚠️ Not enough tracks in the JSON file!")
         await vc.disconnect()
         return
 
@@ -74,6 +88,7 @@ async def start_music_round():
         vc.play(
             discord.FFmpegPCMAudio(
                 song["preview_url"],
+                executable=FFMPEG_PATH,
                 before_options="-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5",
                 options="-vn"
             )
@@ -89,11 +104,13 @@ async def start_music_round():
     await show_leaderboard(channel)
     await channel.send("🎵 Round complete! Type `!music` to start another game.")
 
+
 @bot.event
 async def on_ready():
     print(f"{bot.user} is live as the Music Trivia Bot 🎵")
     # Auto-start on bot ready:
     await start_music_round()
+
 
 @bot.event
 async def on_message(message):
@@ -124,6 +141,7 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
+
 async def show_leaderboard(channel):
     if not scores:
         await channel.send("No correct answers this round.")
@@ -135,9 +153,11 @@ async def show_leaderboard(channel):
     )
     await channel.send(f"🏆 **Final Leaderboard:**\n{leaderboard}")
 
+
 @bot.command(name="music")
 async def manual_start(ctx):
     await ctx.send("🎧 Starting a new music trivia round!")
     await start_music_round()
+
 
 bot.run(TOKEN)
