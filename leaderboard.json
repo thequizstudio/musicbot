@@ -1,0 +1,33 @@
+import json
+from datetime import datetime, timedelta
+
+WIN_DATA_FILE = 'wins.json'
+
+def load_wins():
+    try:
+        with open(WIN_DATA_FILE, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
+def save_wins(wins):
+    with open(WIN_DATA_FILE, 'w') as f:
+        json.dump(wins, f)
+
+def record_win(user_id):
+    wins = load_wins()
+    wins.append({"user_id": user_id, "timestamp": datetime.utcnow().isoformat()})
+    save_wins(wins)
+
+def get_24h_leaderboard():
+    wins = load_wins()
+    cutoff = datetime.utcnow() - timedelta(hours=24)
+    recent_wins = [w for w in wins if datetime.fromisoformat(w['timestamp']) > cutoff]
+
+    counts = {}
+    for w in recent_wins:
+        counts[w['user_id']] = counts.get(w['user_id'], 0) + 1
+
+    # Sort by wins descending
+    leaderboard = sorted(counts.items(), key=lambda x: x[1], reverse=True)
+    return leaderboard
