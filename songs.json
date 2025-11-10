@@ -1,116 +1,276 @@
 [
   {
-    "question": "DECADE: 1980s📅\n\nGuess the song from this clip:",
+    "question": "DECADE: 1980s📅\n\nGuess the **song title** from this clip:",
     "answer": "Never Gonna Give You Up",
     "url": "https://music.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
-    "question": "DECADE: 1980s 📅\n\nName this 80s pop hit:",
+    "question": "DECADE: 1980s 📅\n\nGuess the **song title** from this clip:",
     "answer": "Billie Jean",
     "url": "https://music.youtube.com/watch?v=Zi_XLOBDo_Y"
   },
-  {
-    "question": "CLASSIC ROCK 🎸\n\nWhich song is this?",
-    "answer": "Bohemian Rhapsody",
-    "url": "https://music.youtube.com/watch?v=fJ9rUzIMcZQ"
-  },
-  {
-    "question": "ALTERNATIVE 🤘\n\nIdentify the track:",
-    "answer": "Smells Like Teen Spirit",
-    "url": "https://music.youtube.com/watch?v=hTWKbfoikeg"
-  },
-  {
-    "question": "CLASSIC ROCK 🎸\n\nWhat’s the name of this classic rock song?",
-    "answer": "Hotel California",
-    "url": "https://music.youtube.com/watch?v=EqPtz5qN7HM"
-  },
-  {
-    "question": "DECADE: 2010s 📅\n\nGuess the track from this snippet:",
-    "answer": "Shape of You",
-    "url": "https://music.youtube.com/watch?v=JGwWNGJdvx8"
-  },
-  {
-    "question": "DECADE: 2020s 📅\n\nWhich song is this modern pop smash?",
+   {
+    "question": "DECADE: 2020s 📅\n\nGuess the **song title** from this clip:",
     "answer": "Blinding Lights",
     "url": "https://music.youtube.com/watch?v=fHI8X4OXluQ"
   },
   {
-    "question": "DECADE: 1990s 📅\n\nName this hit from the 90s:",
+    "question": "DECADE: 1990s 📅\n\nGuess the **song title** from this clip:",
     "answer": "Wonderwall",
     "url": "https://music.youtube.com/watch?v=6hzrDeceEKc"
   },
   {
-    "question": "DECADE: 2010s 📅\n\nWhat’s the name of this dance track?",
-    "answer": "Titanium",
-    "url": "https://music.youtube.com/watch?v=JRfuAukYTKg"
+    "question": "CLASSIC ROCK 🎸\n\nGuess the **song title** from this clip:",
+    "answer": "Bohemian Rhapsody",
+    "url": "https://music.youtube.com/watch?v=fJ9rUzIMcZQ"
   },
   {
-    "question": "DECADE: 2010s 📅\n\nIdentify this pop-rock song:",
-    "answer": "Uptown Funk",
-    "url": "https://music.youtube.com/watch?v=OPf0YbXqDm0"
+    "question": "ALTERNATIVE 🤘\n\nGuess the **song title** from this clip:",
+    "answer": "Smells Like Teen Spirit",
+    "url": "https://music.youtube.com/watch?v=hTWKbfoikeg"
   },
   {
-    "question": "MOTOWN HITS 📀\n\nGuess the classic Motown song:",
-    "answer": "I Heard It Through the Grapevine",
-    "url": "https://music.youtube.com/watch?v=6LAPFM3dgag"
+    "question": "CLASSIC ROCK 🎸\n\nGuess the **song title** from this clip:",
+    "answer": "Hotel California",
+    "url": "https://music.youtube.com/watch?v=EqPtz5qN7HM"
   },
   {
-    "question": "HIP HOP 📾\n\nGuess the song from this clip:",
-    "answer": "Lose Yourself",
-    "url": "https://music.youtube.com/watch?v=_Yhyp-_hX2s"
-  },
-  {
-    "question": "ELECTRONIC ⚡\n\nGuess the song from this clip:",
-    "answer": "Sandstorm",
-    "url": "https://music.youtube.com/watch?v=y6120QOlsfU"
-  },
-  {
-    "question": "DECADE: 2000s📅\n\nGuess the song from this clip:",
-    "answer": "Hey Ya!",
-    "url": "https://music.youtube.com/watch?v=PWgvGjAhvIw"
-  },
-  {
-    "question": "POP DIVAS 👑\n\nGuess the song from this clip:",
-    "answer": "Bad Romance",
-    "url": "https://music.youtube.com/watch?v=qrO4YZeyl0I"
-  },
-  {
-    "question": "POP DIVAS 👑\n\nGuess the song from this clip:",
-    "answer": "Crazy in Love",
-    "url": "https://music.youtube.com/watch?v=ViwtNLUqkMY"
-  },
-  {
-    "question": "DECADE: 2010s📅\n\nGuess the song from this clip:",
-    "answer": "Rolling in the Deep",
-    "url": "https://music.youtube.com/watch?v=rYEDA3JcQqw"
-  },
-  {
-    "question": "ALTERNATIVE 🤘\n\nGuess the song from this clip:",
-    "answer": "Enter Sandman",
-    "url": "https://music.youtube.com/watch?v=CD-E-LDc384"
-  },
-  {
-    "question": "DECADE: 2010s📅\n\nGuess the song from this clip:",
+    "question": "DECADE: 2010s 📅\n\nGuess the **song title** from this clip:",
     "answer": "Shape of You",
     "url": "https://music.youtube.com/watch?v=JGwWNGJdvx8"
   },
   {
-    "question": "REGGAE 🇯🇲\n\nGuess the song from this clip:",
+    "question": "DECADE: 2010s 📅\n\nGuess the **song title** from this clip:",
+    "answer": "Titanium",
+    "url": "https://music.youtube.com/watch?v=JRfuAukYTKg"
+  },
+  {
+    "question": "DECADE: 2010s 📅\n\nGuess the **song title** from this clip:",
+    "answer": "Shape of You",
+    "url": "https://music.youtube.com/watch?v=JGwWNGJdvx8"
+  },
+  {
+    "question": "DECADE: 2010s 📅\n\nGuess the **song title** from this clip:",
+    "answer": "Call Me Maybe",
+    "url": "https://music.youtube.com/watch?v=fWNaR-rxAic"
+  },
+  {
+    "question": "DECADE: 2010s 📅\n\nGuess the **song title** from this clip:",
+    "answer": "Happy",
+    "url": "https://music.youtube.com/watch?v=ZbZSe6N_BXs"
+  },
+  {
+    "question": "DECADE: 2010s 📅\n\nGuess the **song title** from this clip:",
+    "answer": "Blurred Lines",
+    "url": "https://music.youtube.com/watch?v=yyDUC1LUXSU"
+  },
+  {
+    "question": "DECADE: 2010s 📅\n\nGuess the **song title** from this clip:",
+    "answer": "Uptown Funk",
+    "url": "https://music.youtube.com/watch?v=OPf0YbXqDm0"
+  },
+  {
+    "question": "MOTOWN HITS 📀\n\nGuess the **song title** from this clip:",
+    "answer": "My Girl",
+    "url": "https://music.youtube.com/watch?v=6xKWiCMKKJg"
+  },
+  {
+    "question": "MOTOWN HITS 📀\n\nGuess the **song title** from this clip:",
+    "answer": "Baby Love",
+    "url": "https://music.youtube.com/watch?v=oFNo3epm3WU"
+  },
+  {
+    "question": "MOTOWN HITS 📀\n\nGuess the **song title** from this clip:",
+    "answer": "Bernadette",
+    "url": "https://music.youtube.com/watch?v=HTtUJUq0VdA"
+  },
+  {
+    "question": "MOTOWN HITS 📀\n\nGuess the **song title** from this clip:",
+    "answer": "I Want You Back",
+    "url": "https://music.youtube.com/watch?v=s3Q80mk7bxE"
+  },
+  {
+    "question": "MOTOWN HITS 📀\n\nGuess the **song title** from this clip:",
+    "answer": "Superstition",
+    "url": "https://music.youtube.com/watch?v=0CFuCYNx-1g"
+  },
+  {
+    "question": "RAP & HIP HOP 🎤\n\nGuess the **song title** from this clip:",
+    "answer": "Lose Yourself",
+    "url": "https://music.youtube.com/watch?v=_Yhyp-_hX2s"
+  },
+  {
+    "question": "ELECTRONIC ⚡\n\nGuess the **song title** from this clip:",
+    "answer": "Sandstorm",
+    "url": "https://music.youtube.com/watch?v=y6120QOlsfU"
+  },
+  {
+    "question": "DECADE: 2000s📅\n\nGuess the **song title** from this clip:",
+    "answer": "Hey Ya!",
+    "url": "https://music.youtube.com/watch?v=PWgvGjAhvIw"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Bad Romance",
+    "url": "https://music.youtube.com/watch?v=qrO4YZeyl0I"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Like a Prayer",
+    "url": "https://music.youtube.com/watch?v=79fzeNUqQbQ"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Vogue",
+    "url": "https://music.youtube.com/watch?v=GuJQSAiODqI"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Baby One More Time",
+    "url": "https://music.youtube.com/watch?v=C-u5WLJ9Yk4"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Material Girl",
+    "url": "https://music.youtube.com/watch?v=6p-lDYPR2P8"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Genie in a Bottle",
+    "url": "https://music.youtube.com/watch?v=kIDWgqDBNXA"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Bleeding Love",
+    "url": "https://music.youtube.com/watch?v=Q6k8VVdVLbw"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Don't Speak",
+    "url": "https://music.youtube.com/watch?v=TR3Vdo5etCQ"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Halo",
+    "url": "https://music.youtube.com/watch?v=bnVUHWCynig"
+  },
+  {
+    "question": "POP DIVAS 👑\n\nGuess the **song title** from this clip:",
+    "answer": "Toxic",
+    "url": "https://music.youtube.com/watch?v=LOZuxwVk7TU"
+  },
+  {
+    "question": "DECADE: 2010s📅\n\nGuess the **song title** from this clip:",
+    "answer": "Rolling in the Deep",
+    "url": "https://music.youtube.com/watch?v=rYEDA3JcQqw"
+  },
+  {
+    "question": "ALTERNATIVE 🤘\n\nGuess the **song title** from this clip:",
+    "answer": "Enter Sandman",
+    "url": "https://music.youtube.com/watch?v=CD-E-LDc384"
+  },
+  {
+    "question": "DECADE: 2010s📅\n\nGuess the **song title** from this clip:",
+    "answer": "Shape of You",
+    "url": "https://music.youtube.com/watch?v=JGwWNGJdvx8"
+  },
+  {
+    "question": "REGGAE 🇯🇲\n\nGuess the **song title** from this clip:",
     "answer": "No Woman No Cry",
     "url": "https://music.youtube.com/watch?v=IT8XvzIfiAY"
   },
   {
-    "question": "COUNTRY HITS 🤠\n\nGuess the song from this clip:",
+    "question": "REGGAE 🇯🇲\n\nGuess the **song title** from this clip:",
+    "answer": "One Love",
+    "url": "https://music.youtube.com/watch?v=vdB-8eLEW8g"
+  },
+  {
+    "question": "REGGAE 🇯🇲\n\nGuess the **song title** from this clip:",
+    "answer": "Buffalo Soldier",
+    "url": "https://music.youtube.com/watch?v=2x-oSX6YwX8"
+  },
+  {
+    "question": "REGGAE 🇯🇲\n\nGuess the **song title** from this clip:",
+    "answer": "Red Red Wine",
+    "url": "https://music.youtube.com/watch?v=J7wHROiC2gQ"
+  },
+  {
+    "question": "REGGAE 🇯🇲\n\nGuess the **song title** from this clip:",
+    "answer": "Stir It Up",
+    "url": "https://music.youtube.com/watch?v=GM0JW4r7R3s"
+  },
+  {
+    "question": "COUNTRY HITS 🤠\n\nGuess the **song title** from this clip:",
     "answer": "Jolene",
     "url": "https://music.youtube.com/watch?v=Ixrje2rXLMA"
   },
   {
-    "question": "DISCO 🕺\n\nGuess the song from this clip:",
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
     "answer": "Stayin' Alive",
     "url": "https://music.youtube.com/watch?v=I_izvAbhExY"
   },
   {
-    "question": "INDIE 🪕\n\nGuess the song from this clip",
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
+    "answer": "I Will Survive",
+    "url": "https://music.youtube.com/watch?v=ARt9HV9T0w8"
+  },
+  {
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
+    "answer": "Boogie Wonderland",
+    "url": "https://music.youtube.com/watch?v=3b6GGKuZnJ8"
+  },
+  {
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
+    "answer": "Night Fever",
+    "url": "https://music.youtube.com/watch?v=-ihs0a-nh9Y"
+  },
+  {
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
+    "answer": "Get Down Tonight",
+    "url": "https://music.youtube.com/watch?v=0GQo2dS1N6g"
+  },
+  {
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
+    "answer": "Funkytown",
+    "url": "https://music.youtube.com/watch?v=HRQ2IqlNflM"
+  },
+  {
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
+    "answer": "Lady Marmalade",
+    "url": "https://music.youtube.com/watch?v=8wC6UQN-nKE"
+  },
+  {
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
+    "answer": "Car Wash",
+    "url": "https://music.youtube.com/watch?v=0g0rKoVZrM8"
+  },
+  {
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
+    "answer": "More Than a Woman",
+    "url": "https://music.youtube.com/watch?v=GIGMNRhx6cA"
+  },
+  {
+    "question": "DISCO 🕺\n\nGuess the **song title** from this clip:",
+    "answer": "Ring My Bell",
+    "url": "https://music.youtube.com/watch?v=8phch9z8Yso"
+  },
+  {
+    "question": "BOY BANDS 👦\n\nGuess the **song title** from this clip:",
+    "answer": "I Want It That Way",
+    "url": "https://music.youtube.com/watch?v=4fndeDfaWCg"
+  },
+  {
+    "question": "BOY BANDS 👦\n\nGuess the **song title** from this clip:",
+    "answer": "Everybody",
+    "url": "https://music.youtube.com/watch?v=JmmNO0I3XfI"
+  },
+  {
+    "question": "BOY BANDS 👦\n\nGuess the **song title** from this clip:",
+    "answer": "Bye Bye Bye",
+    "url": "https://music.youtube.com/watch?v=Eo-KmOd3i7s"
+  },
+  {
+    "question": "INDIE 🪕\n\nGuess the **song title** from this clip:",
     "answer": "Chasing Cars",
     "url": "https://music.youtube.com/watch?v=GemKqzILV4w"
   }
